@@ -1,0 +1,74 @@
+<html>
+
+<body>
+    <script>
+        //Obj literal/initializer
+
+        //JSON - JavaScript Object Notation
+
+        var stud = { prn: 12345, sname: "Avinash" }
+        //console.log(stud.prn, stud.sname)  //read
+        stud.prn = 7788  //write into teh prop
+        stud.sname = "Abhishek"
+        //console.log(stud.prn, stud.sname)
+
+        const emp = {
+            empid: 1234,
+            ename: "Deep",
+            sal: 45689.99,
+            isContract: false,
+            hobbies: ["Chess", "Football", "Coding"],
+            address: { city: "Bhopal", state: "MP" }
+        }
+        //console.log(emp.empid, emp.ename, emp.sal, emp.isContract)
+        //console.log(emp.hobbies[1])
+        //console.log(emp.address.state)
+
+
+        var book = {
+            id: 101,
+            bname: "Core Java",
+            author: "Shrilata",
+            price: 450,
+            display: function () {
+                console.log(this.id, this.bname, this.author, this.price)
+            },
+            incrPrice: function (amount) {
+                this.price += amount
+            }
+        }
+
+        /*
+        book.display()
+        book.incrPrice(50)
+        book.display()
+
+        for(prop in book)
+          console.log(prop, book[prop])
+          */
+
+        const users = [
+            { uid: 1, uname: "admin", pass: "admin123" },
+            { uid: 2, uname: "user1", pass: "pass1" },
+            { uid: 3, uname: "user2", pass: "pass2" },
+            { uid: 4, uname: "shrilata", pass: "secret" }
+        ]
+
+        
+        var str = "<table border='1'>"
+
+        for(user of users){
+            str+= "<tr><td>" + user.uid+ "</td><td>" + user.uname + "</td><td>" + user.pass + "</td></tr>"
+        }
+
+        str+="</table>"
+        document.write(str)
+         
+
+
+
+    </script>
+
+</body>
+
+</html>

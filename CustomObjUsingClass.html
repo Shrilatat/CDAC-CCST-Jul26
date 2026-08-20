@@ -1,0 +1,72 @@
+<html>
+
+<body>
+    <script>
+        //ES6
+        class Greeter {
+            greet() {
+                document.write("Hello User <br>")
+            }
+        }
+        var g1 = new Greeter()
+        g1.greet()
+
+
+
+
+
+
+        class Calc {
+            add(a, b) {
+                return a + b
+            }
+            sub(a, b) {
+                return a - b
+            }
+        }
+
+        var c1 = new Calc()
+        //document.write(`The sum is ${c1.add(11, 22)}`)
+        //document.write(`The diff is ${c1.sub(11, 22)}`)
+
+
+        class Student {
+            constructor(prn, sname) {
+                this.prn = prn
+                this.sname = sname
+            }
+            displayStudDetails() {
+                document.write(`PRN : ${this.prn}   Student name ${this.sname}`)
+            }
+        }
+        var s1 = new Student(101, "Supriya")
+        var s2 = new Student(102, "Deep")
+        var s3 = new Student(131, "vansaj")
+        var s4 = new Student(121, "Divyansh")
+/*
+        s1.displayStudDetails()
+        s2.displayStudDetails()
+        s3.displayStudDetails()
+        s4.displayStudDetails()
+*/
+        var studArr = [s1,s2,s3,s4]
+
+        class StudentGPA extends Student{
+            constructor(id, sname, gpa){
+                super(id, sname)
+                this.gpa = gpa
+            }
+            displayStudDetails() {
+                super.displayStudDetails()
+                document.write(`GPA : ${this.gpa} <br>`)
+            }
+        }
+        var sg1 = new StudentGPA(101,"aaaa", 9.6)
+        sg1.displayStudDetails()
+
+
+
+    </script>
+</body>
+
+</html>
