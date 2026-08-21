@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+.c1{color:blue}
+        </style>
+        
+    </head>
+    <body>
+        <p id="p1">This is para-1</p>
+        <input type="button" value="set" onclick="f1()">
+        <input type="button" value="get" onclick="f2()">
+        <input type="button" value="remove" onclick="f3()">
+
+        <script>
+            function f1(){
+                var para = document.getElementById("p1")
+                para.setAttribute("company", "cdac")
+                para.setAttribute("class","c1")
+            }
+            function f2(){
+                var para = document.getElementById("p1")
+                var id = para.getAttribute("id")
+                var cname = para.getAttribute("company")
+                alert(id + "   " + cname)
+            }
+            function f3(){
+                 var para = document.getElementById("p1")
+                 para.removeAttribute("company")
+                 para.removeAttribute("class")
+            }
+        </script>
+    </body>
+</html>

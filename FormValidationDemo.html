@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <style>
+        span{color:red}
+    </style>
+    <script>
+        function validateUserName() {
+
+            var un = document.getElementById("uname").value
+            if (un.length == 0 || un == null || un == "") {
+                document.getElementById("s1").textContent = ("Username is mandatory!")
+                return false
+            }
+            else if (un.length < 5) {
+                document.getElementById("s1").textContent = ("username min 5 chars")
+                return false
+            }
+            return true
+        }
+        function validateAge() {
+            var age = document.getElementById("age").value
+            if (age.length == 0 || age == null || age == "") {
+                document.getElementById("s2").textContent = ("Age is mandatory!")
+                return false
+            }
+            else if (isNaN(age)) {
+                document.getElementById("s2").textContent = ("age must be a number")
+                return false
+            }
+            else {
+                var ageAsNumber = parseInt(age)
+                if (ageAsNumber < 18 || ageAsNumber > 60) {
+                    document.getElementById("s2").textContent = ("age not in range")
+                    return false
+                }
+            }
+            return true
+        }
+
+        function ValidateEmail(){
+            if(str.indexOf("@") != -1)
+        }
+        function validate(){
+            if(validateUserName() && validateAge()){
+                return true
+            }
+            return false
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        username: <input id="uname"> <span id="s1"></span> <br>
+        Email: <input id="uname"> <span id="s1"></span> <br>
+        Age: <input id="age"> <span id="s2"></span><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
